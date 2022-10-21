@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto-LightItalic';
+    src: url(../fonts/Roboto-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+html, body{
+    font-family: 'Roboto-Bold';
+    margin: 0;
+    padding: 0;
+}  
+
+#navbar{
+    border: 1px solid coral;
+}
+  
+#navbar li{
+    float: left;
+}
+  
+#navbar li a{
+    display: block;
+    color: darkslateblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar li a:hover{
+    background-color:darkslateblue;
+    color: coral;
+}
+
+#navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:coral;
+}
+
+body{
+    background-color:darkslateblue;
+}
+
+h1{
+    text-align: center;
+    color: coral;
+    margin: 5%;
+}
+
+#battlefield{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 3px solid coral;
+    margin-right: 5%;
+    margin-left: 5%;
+    flex-direction: row;
+}
+
+#battlefield aside{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#battlefield aside figure img{
+    border: 3px solid coral;
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+#battlefield aside figure figcaption{
+    text-align: center;
+    align-items: center;
+    color: coral;
+}
+
+#scoreboard{
+    text-align: center;
+    color: greenyellow;
+}
+
+#notify{
+    color: greenyellow;
+    text-align: center;
+    margin: 5%;
+}
+
+#buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin: 5%;
+}
+
+button{
+    color: darkslateblue;
+    border-radius: 5px;
+    background-color: coral;
+    border-color: coral;
+    height: 50px;
+    width: 100px;
+}
+
+button:hover{
+    color: white;
+    background-color: crimson;
+    border-color: crimson;
+}
+
+footer p{
+    margin: 0;
+    padding: 1%;
+}
+
+footer{
+    background-color:coral;
+    color:darkslateblue;
+    text-align: center;
+    margin: 0;
+}

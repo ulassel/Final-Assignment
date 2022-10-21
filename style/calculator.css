@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto-LightItalic';
+    src: url(../fonts/Roboto-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face{
+    font-family:'Orbitron';
+    src: url(../fonts/Orbitron-VariableFont_wght.ttf);
+}
+
+html, body{
+    font-family: 'Roboto-Bold';
+    margin: 0;
+    padding: 0;
+}  
+
+#navbar{
+    border: 1px solid coral;
+}
+  
+#navbar li{
+    float: left;
+}
+  
+#navbar li a{
+    display: block;
+    color: darkslateblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar li a:hover{
+    background-color:darkslateblue;
+    color: coral;
+}
+
+#navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:coral;
+}
+
+body{
+    background-color: darkslateblue;
+}
+
+h1{
+    text-align: center;
+    color: coral;
+    margin-bottom: 5%;
+}
+
+#calculator{
+    display: flex;
+    min-height: 95vh;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: darkslateblue;
+    flex-direction: column;
+    margin: 5%;
+}
+
+#dashboard{
+    background-color: darkslateblue;
+    border: 10px solid coral;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+    gap: 2px;
+}
+
+#display{
+    grid-column: 1 / -1;
+    background-color: royalblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 5px;
+    font-size: 5.5em;
+    font-weight: initial;
+    text-shadow: 1.3px 1.3px black;
+    margin: 5px;
+    color: greenyellow;
+    font-family:'Orbitron';
+}
+
+button{
+    margin: 1px;
+    border-radius: 5%;
+    border: none;
+    font-weight: initial;
+    font-size: 2em;
+    font-family: monospace;
+    color: black;
+}
+
+.equals, .operator{
+    background-color: rosybrown;
+}
+
+.equals:active, .operator:focus{
+    background-color: crimson;
+}
+
+.decimal, .operand{
+    background-color: darkturquoise;
+}
+
+.decimal:active, .operand:active{
+    background-color: darkcyan;
+}
+
+.percent, .sign, .clear, .backspace{
+    background-color: darkorchid;
+}
+
+.percent:active, .sign:active, .clear:active, .backspace:active{
+    background-color: darkmagenta;
+}
+
+footer p{
+    margin: 0;
+    padding: 1%;
+}
+
+footer{
+    background-color:coral;
+    color:darkslateblue;
+    text-align: center;
+    margin: 0;
+}
