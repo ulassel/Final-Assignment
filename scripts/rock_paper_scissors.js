@@ -54,8 +54,7 @@ function playRound(playerSelection, computerSelection){
             break;
         case 2:
             document.getElementById("computer").src = "../images/scissors.png";
-            computer_text.innerHTML = "Scissors";
-            
+            computer_text.innerHTML = "Scissors";      
     }
     
     //if(computerSelection == playerSelection){
