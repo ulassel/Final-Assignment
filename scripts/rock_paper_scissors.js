@@ -6,9 +6,9 @@ const scissors_btn = document.querySelector("#scissors");
 const computer_text = document.querySelector("#computer_text");
 const player_text = document.querySelector("#player_text");
 const notify = document.querySelector("#notify");
-//const results = [["t", "c", "p"], 
-//                 ["p", "t", "c"], 
-//                 ["c", "p", "t"]];
+const results = [["t", "c", "p"], 
+                 ["p", "t", "c"], 
+                 ["c", "p", "t"]];
 let computerSelection = 0;
 let playerSelection = 0;
 let player = 0;
@@ -58,39 +58,41 @@ function playRound(playerSelection, computerSelection){
             
     }
     
-    if(computerSelection == playerSelection){
-        window.alert("It's a draw!");
-    }else if((computerSelection == 0 && playerSelection == 2) || (computerSelection == 1 && playerSelection == 0) || (computerSelection == 2 && playerSelection == 1)){
-        window.alert("Computer wins this round!");
-        computer++;
-        scoreboard.innerHTML = `Player: ${player} - Computer: ${computer}`;   
-    }else if((computerSelection == 2 && playerSelection == 0) || (computerSelection == 0 && playerSelection == 1) || (computerSelection == 1 && playerSelection == 2)){
-        window.alert("Player wins this round!");
-        player++;
-        scoreboard.innerHTML = `Player: ${player} - Computer: ${computer}`; 
-    }
+    //if(computerSelection == playerSelection){
+    //    window.alert("It's a draw!");
+    //}else if((computerSelection == 0 && playerSelection == 2) || (computerSelection == 1 && playerSelection == 0) || (computerSelection == 2 && playerSelection == 1)){
+    //    window.alert("Computer wins this round!");
+    //     computer++;
+    //     scoreboard.innerHTML = `Player: ${player} - Computer: ${computer}`;   
+    // }else if((computerSelection == 2 && playerSelection == 0) || (computerSelection == 0 && playerSelection == 1) || (computerSelection == 1 && playerSelection == 2)){
+    //     window.alert("Player wins this round!");
+    //     player++;
+    //     scoreboard.innerHTML = `Player: ${player} - Computer: ${computer}`; 
+    // }
+
+    return results[playerSelection][computerSelection];
 }
 
 function game(){
     while(player != 5 || computer !=5){
-        playRound();
-    }
-   //      switch(result){
-   //          case "p":
-   //              player++;
-   //              window.alert("Player wins this round!");
-   //              console.log(`Player: ${player} - Computer: ${computer}`);
-   //              break;
-   //          case "c":
-   //              computer++;
-   //              window.alert("Computer wins this round!");
-   //              console.log(`Player: ${player} - Computer: ${computer}`);
-   //              break;
-   //          case "t":
-   //              window.alert("It's a draw!");
-   //              console.log(`Player: ${player} - Computer: ${computer}`);
-   //      }
-   //  }
+        result = playRound();
+    
+         switch(result){
+             case "p":
+                 player++;
+                 window.alert("Player wins this round!");
+                 scoreboard.innerHTML = `Player: ${player} - Computer: ${computer}`;
+                 break;
+             case "c":
+                 computer++;
+                 window.alert("Computer wins this round!");
+                 scoreboard.innerHTML = `Player: ${player} - Computer: ${computer}`;
+                 break;
+             case "t":
+                 window.alert("It's a draw!");
+                 scoreboard.innerHTML = `Player: ${player} - Computer: ${computer}`;
+         }
+     }
 
     if(player > computer){
         notify.innerHTML = "Player wins the game!";
