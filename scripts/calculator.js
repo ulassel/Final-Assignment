@@ -81,14 +81,14 @@ function inputOperator(operator) {
         secondOperator = operator;
         secondOperand = displayValue;
         result = operate(Number(firstOperand), Number(secondOperand), firstOperator);
-        displayValue = roundAccurately(result, 15).toString();
+        displayValue = roundAccurately(result).toString();
         firstOperand = displayValue;
         result = null;
     } else if(firstOperator != null && secondOperator != null) {
         secondOperand = displayValue;
         result = operate(Number(firstOperand), Number(secondOperand), secondOperator);
         secondOperator = operator;
-        displayValue = roundAccurately(result, 15).toString();
+        displayValue = roundAccurately(result).toString();
         firstOperand = displayValue;
         result = null;
     } else { 
@@ -106,7 +106,7 @@ function inputEquals() {
         if(result == 'inf') {
             displayValue = 'inf';
         }else{
-            displayValue = roundAccurately(result, 15).toString();
+            displayValue = roundAccurately(result).toString();
             firstOperand = displayValue;
             secondOperand = null;
             firstOperator = null;
@@ -121,7 +121,7 @@ function inputEquals() {
             alert("Just kidding, you can't divide a numbet to 0 u genious.");
             displayValue = 'inf';
         }else{
-            displayValue = roundAccurately(result, 15).toString();
+            displayValue = roundAccurately(result).toString();
             firstOperand = displayValue;
             secondOperand = null;
             firstOperator = null;
@@ -184,6 +184,6 @@ function operate(x, y, operator) {
     }
 }
 
-function roundAccurately(num, places) {
-    return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
+function roundAccurately(num) {
+    return parseFloat(Math.round(num + 'e' + 10) + 'e-' + 10);
 }
