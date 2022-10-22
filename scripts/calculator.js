@@ -18,6 +18,11 @@ function updateDisplay() {
     if(displayValue.length > 9) {
         display.innerText = displayValue.substring(0, 9);
     }
+    if(!displayValue.includes('.')){
+        dotFlag = 0;
+    }else if(displayValue.includes('.')){
+        dotFlag = 1;
+    }
 }
   
 updateDisplay();
@@ -48,9 +53,6 @@ function clickButton() {
             } else if(buttons[i].classList.contains('backspace')){
                 inputBackspace();
                 updateDisplay();
-                if(!displayValue.includes('.')){
-                    dotFlag = 0;
-                }
             }
         }
     )}
